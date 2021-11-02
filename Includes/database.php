@@ -1,10 +1,10 @@
 <?php
-header('Content-Type: application/json');
 
 try {
-    $bdd = new PDO('mysql:host=localhost;port=3306;dbname=portfolio', 'root', '');
-    $bdd -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-} catch (Exception $e){
-    echo $e;
+    $bdd = new PDO('mysql:host="127.0.0.1";dbname=argent;charset=utf8', 'root', 'root');
 }
+catch(Exception $e){
+    die ('Ereur :'. $e->getMessage());
+}
+
 ?>

@@ -368,11 +368,11 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="../sofianedjm/Includes/controller.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="name">Nom&Prénom</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+                  <label for="name">Nom</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Entrez votre nom" required>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">E-mail</label>
@@ -381,18 +381,13 @@
               </div>
               <div class="form-group">
                 <label for="name">Sujet</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Entrez votre sujet" required>
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <textarea class="form-control" name="message" rows="10" placeholder="Entrez votre message" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Chargement</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Votre message a bien été envoyé.</div>
-              </div>
-              <div class="text-center"><button type="submit">Envoyer</button></div>
+              <div class="text-center"><button type="submit" name="submit"><a href="../sofianedjm/Includes/controller.php">Envoyez</a></button></div>
             </form>
           </div>
 
@@ -407,7 +402,7 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Sofiane Djemaa</span></strong>
+        &copy;<strong><span> Sofiane Djemaa</span></strong>
       </div>
     </div>
   </footer>

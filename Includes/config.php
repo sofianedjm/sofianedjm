@@ -1,7 +1,7 @@
 <?php
-            $servername = 'localhost';
-            $username = 'sofiane';
-            $password = 'Sofianedjemaa93';
+            $servername = '127.0.0.1';
+            $username = 'root';
+            $password = 'root';
             $database = 'portfolio';
             
             //Connexion avec la bdd
