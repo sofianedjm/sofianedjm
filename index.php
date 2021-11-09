@@ -65,7 +65,7 @@
   <!-- ======= Description personnelle ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-      <img src="../sofianedjm-main/assets/img/hero-bg.png"/>
+      <img src="../sofianedjm/assets/img/hero-bg.png"/>
       <p>I'm <span class="typed" data-typed-items="Student , Developer FullStack"></span></p>
     </div>
   </section>
@@ -367,7 +367,7 @@
 
           </div>
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="index.php?action=addFormulaire" method="POST" role="form" class="php-email-form">
+            <form action="./redirection.php?action=addFormulaire" method="GET" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Nom</label>
@@ -386,7 +386,8 @@
                 <label for="name">Message</label>
                 <input type="textarea" class="form-control" name="message" rows="10" placeholder="Entrez votre message" required></textarea>
               </div>
-              <div class="text-center"><button type="submit" name="submit">Envoyez</button></div>
+              <div class="text-center"><button type="submit" name="submit"><a href="./router.php?action=addFormulaire">Envoyez</button></a></div>
+              <div class="text-center"><a href="./router.php?action=listFormulaire">Nombre de formulaire enregistré</a></div>
             </form>
           </div>
 

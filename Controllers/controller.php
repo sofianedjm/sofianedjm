@@ -1,7 +1,7 @@
 <?php 
 
-require('../sofianedjm-main/Models/Model.php');
-require('../sofianedjm-main/Models/form.php');
+require('../sofianedjm/Models/Model.php');
+require('../sofianedjm/Controllers/form.php');
 
 setlocale(LC_TIME, 'fra_fra');
 session_start();
@@ -10,7 +10,7 @@ session_start();
 function listFormulaire(){
 $m = Model::getModel();
 $nbInfos = $m->getNbFormulaire();
-echo $nbInfos;
+echo "Le nombre de formulaire enregistré est de " . $nbInfos ;
 }
 
 function addFormulaire() {
@@ -20,8 +20,7 @@ echo $m;
 }
 
 function router() {
- require ('../sofianedjm-main/index.php');
+ require ('../sofianedjm/index.php');
 }
-
 
 ?>
