@@ -10,23 +10,20 @@ session_start();
 function listFormulaire(){
 $m = Model::getModel();
 $nbInfos = $m->getNbFormulaire();
-
-echo "Le nombre de formulaire enregistré est de " . $nbInfos ;
+include_once ('../sofianedjm/Views/view_listFormulaire.php');
 }
 
-function list25Formulaire(){
+function list5Formulaire(){
 $m = Model::getModel();
-$nbInfos = $m->getNb25Formulaire();
+$nbInfos = $m->getNb5Formulaire();
+include_once('../sofianedjm/Views/view_list5Formulaire.php');
 
-foreach($nbInfos as $row){
-      echo $row["id"] . '</br>' . $row["nom"] . '</br>' . $row["email"] . '</br>' . $row["sujet"] . $row["message"]  ;
-    } 
 }
 
-function addFormulaire() {
-$m = new Form($_POST['name'],$_POST['email'],$_POST['sujet'],$_POST['message']);
-$m->addFormulaireInfos();
-echo $m;
+function addFormulaire($nom, $email, $sujet, $message) {
+$m = Model::getModel();
+$m->addFormulaireInfos($nom, $email, $sujet, $message);
+echo "ok";
 }
 
 function router() {

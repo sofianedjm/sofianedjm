@@ -12,8 +12,8 @@ if (isset($_GET['action'])) {
             }
         }
     }
-    elseif ($_GET['action'] === 'list25Formulaire'){
-        list25Formulaire();
+    elseif ($_GET['action'] === 'list5Formulaire'){
+        list5Formulaire();
     }
 }
 else {

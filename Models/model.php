@@ -19,12 +19,11 @@ class Model
     public function __construct()
     {
         try {
-            $bdd = new PDO('mysql:host=localhost;dbname=portfolio','root', '');
-            $bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-            $this->bdd=$bdd;
-        }
-        catch(Exception $e){
-            die ('Connexion error :'. $e->getMessage());
+            $bdd = new PDO('mysql:host=localhost;dbname=portfolio', 'root', '');
+            $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->bdd = $bdd;
+        } catch (Exception $e) {
+            die('Connexion error :' . $e->getMessage());
         }
     }
 
@@ -43,11 +42,21 @@ class Model
      * Retourne les 25 derniers messages des formulaires
      * @return [array] Contient les informations des messages
      */
-    public function getNb25Formulaire()
+    public function getNb5Formulaire()
     {
-        $req = $this->bdd->prepare('SELECT * FROM formulaire ORDER BY id DESC LIMIT 25');
+        $req = $this->bdd->prepare('SELECT * FROM formulaire ORDER BY id ASC LIMIT 5');
         $req->execute();
         return $req->fetchall();
+    }
+
+    /**
+     * Ajoute un formulaire dans la BDD
+     */
+    public function getAddFormulaire($nom, $email, $sujet, $message)
+    {
+        $query = 'INSERT INTO formulaire(nom,email,sujet,message) VALUES(:nom,:email,:sujet,:message)';
+        $req = $this->bdd->prepare($query);
+        return $req;
     }
 
 
@@ -56,12 +65,11 @@ class Model
      * @return [int]
      */
     public function getNbFormulaire()
-    {   
+    {
         $query = "SELECT COUNT(*) FROM formulaire";
         $req = $this->bdd->prepare($query);
         $req->execute();
         $tab = $req->fetch(PDO::FETCH_NUM);
         return $tab[0];
     }
-
 }

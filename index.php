@@ -388,7 +388,7 @@
               </div>
               <div class="text-center"><button type="submit" name="submit"><a href="./router.php?action=addFormulaire">Envoyez</button></a></div>
               <div class="text-center"><a href="./router.php?action=listFormulaire">Nombre de formulaire enregistré</a></div>
-              <div class="text-center"><a href="./router.php?action=list25Formulaire">Liste des 25 derniers formulaire</a></div>
+              <div class="text-center"><a href="./router.php?action=list5Formulaire">Liste des 5 derniers formulaire</a></div>
             </form>
           </div>
 
