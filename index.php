@@ -367,7 +367,7 @@
 
           </div>
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="./redirection.php?action=addFormulaire" method="GET" role="form" class="php-email-form">
+            <form action="./router.php?action=addFormulaire" method="POST" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Nom</label>
@@ -388,6 +388,7 @@
               </div>
               <div class="text-center"><button type="submit" name="submit"><a href="./router.php?action=addFormulaire">Envoyez</button></a></div>
               <div class="text-center"><a href="./router.php?action=listFormulaire">Nombre de formulaire enregistré</a></div>
+              <div class="text-center"><a href="./router.php?action=list25Formulaire">Liste des 25 derniers formulaire</a></div>
             </form>
           </div>
 

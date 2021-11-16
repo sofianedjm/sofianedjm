@@ -40,15 +40,16 @@ class Model
     }
 
     /**
-     * Retourne les 25 derniers messages
+     * Retourne les 25 derniers messages des formulaires
      * @return [array] Contient les informations des messages
      */
-    public function getLast()
+    public function getNb25Formulaire()
     {
         $req = $this->bdd->prepare('SELECT * FROM formulaire ORDER BY id DESC LIMIT 25');
         $req->execute();
         return $req->fetchall();
     }
+
 
     /**
      * Retourne le nombre de message dans la base de données

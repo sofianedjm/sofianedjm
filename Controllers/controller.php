@@ -10,7 +10,17 @@ session_start();
 function listFormulaire(){
 $m = Model::getModel();
 $nbInfos = $m->getNbFormulaire();
+
 echo "Le nombre de formulaire enregistré est de " . $nbInfos ;
+}
+
+function list25Formulaire(){
+$m = Model::getModel();
+$nbInfos = $m->getNb25Formulaire();
+
+foreach($nbInfos as $row){
+      echo $row["id"] . '</br>' . $row["nom"] . '</br>' . $row["email"] . '</br>' . $row["sujet"] . $row["message"]  ;
+    } 
 }
 
 function addFormulaire() {
