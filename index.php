@@ -367,7 +367,7 @@
 
           </div>
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="./router.php?action=addFormulaire" method="POST" role="form" class="php-email-form">
+            <form action="./router.php?action=addFormulaire" method="POST" role="form" name="formulaire" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Nom</label>
@@ -380,13 +380,13 @@
               </div>
               <div class="form-group">
                 <label for="name">Sujet</label>
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Entrez votre sujet" required>
+                <input type="text" class="form-control" name="sujet" id="subject" placeholder="Entrez votre sujet" required>
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
                 <input type="textarea" class="form-control" name="message" rows="10" placeholder="Entrez votre message" required></textarea>
               </div>
-              <div class="text-center"><button type="submit" name="submit"><a href="./router.php?action=addFormulaire">Envoyez</button></a></div>
+              <div class="text-center"><button type="submit" name="submit" form="formulaire">Envoyez</button></div>
               <div class="text-center"><a href="./router.php?action=listFormulaire">Nombre de formulaire enregistré</a></div>
               <div class="text-center"><a href="./router.php?action=list5Formulaire">Liste des 5 derniers formulaire</a></div>
             </form>

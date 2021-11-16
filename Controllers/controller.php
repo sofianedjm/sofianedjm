@@ -22,8 +22,8 @@ include_once('../sofianedjm/Views/view_list5Formulaire.php');
 
 function addFormulaire($nom, $email, $sujet, $message) {
 $m = Model::getModel();
-$m->addFormulaireInfos($nom, $email, $sujet, $message);
-echo "ok";
+$m->getAddFormulaire('$nom', '$email', '$sujet', '$message');
+echo $m;
 }
 
 function router() {

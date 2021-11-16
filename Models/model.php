@@ -54,8 +54,7 @@ class Model
      */
     public function getAddFormulaire($nom, $email, $sujet, $message)
     {
-        $query = 'INSERT INTO formulaire(nom,email,sujet,message) VALUES(:nom,:email,:sujet,:message)';
-        $req = $this->bdd->prepare($query);
+        $req = $this->bdd->prepare("INSERT INTO `formulaire` ('nom', 'email', 'sujet', 'message') VALUES ($nom,$sujet,$message)");
         $req->execute();
         return $req;
     }

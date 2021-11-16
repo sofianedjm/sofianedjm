@@ -3560,7 +3560,6 @@
 
         if (this.bodyHiddenChildElms.length) {
           each(this.bodyHiddenChildElms, function (el) {
-            el.removeAttribute('aria-hidden');
           });
         }
 
