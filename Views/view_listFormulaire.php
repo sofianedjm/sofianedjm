@@ -7,7 +7,7 @@
     </head>
     <body>
         <?php
-            echo '<p align="center"> Nombre de formulaires inscrit dans la base de données ' . $nbInfos . '</p>';
+            echo '<p align="center"> Nombre de formulaires inscrit dans la base de données : ' . $nbInfos . '</p>';
         ?>
     </body>
 </html>

@@ -39,7 +39,7 @@ class Model
     }
 
     /**
-     * Retourne les 25 derniers messages des formulaires
+     * Retourne les 5 derniers messages des formulaires
      * @return [array] Contient les informations des messages
      */
     public function getNb5Formulaire()
@@ -56,6 +56,7 @@ class Model
     {
         $query = 'INSERT INTO formulaire(nom,email,sujet,message) VALUES(:nom,:email,:sujet,:message)';
         $req = $this->bdd->prepare($query);
+        $req->execute();
         return $req;
     }
 
