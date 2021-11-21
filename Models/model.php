@@ -52,9 +52,9 @@ class Model
     /**
      * Ajoute un formulaire dans la BDD
      */
-    public function getAddFormulaire($nom, $email, $sujet, $message)
+    public function getAddFormulaire()
     {
-        $req = $this->bdd->prepare("INSERT INTO `formulaire` ('nom', 'email', 'sujet', 'message') VALUES ($nom,$sujet,$message)");
+        $req = $this->bdd->prepare("INSERT INTO formulaire (id,nom,email, sujet, message) VALUES (id,'$_POST[nom]','$_POST[email]','$_POST[sujet]','$_POST[message]') ");
         $req->execute();
         return $req;
     }

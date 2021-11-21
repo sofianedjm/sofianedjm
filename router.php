@@ -8,8 +8,7 @@ if (isset($_GET['action'])) {
     }
 
     elseif ($_GET['action'] === 'addFormulaire'){
-        die("ok");
-         addFormulaire($_POST['nom'],$_POST['email'],$_POST['sujet'],$_POST['message']);
+         addFormulaire();
     }
 
     elseif ($_GET['action'] === 'list5Formulaire'){

@@ -363,35 +363,24 @@
               </div>
 
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.9541065507!2d2.2769956254638504!3d48.85883363953714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1635857165622!5m2!1sfr!2sfr" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                <br>
             </div>
-
-          </div>
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="./router.php?action=addFormulaire" method="POST" role="form" name="formulaire" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Nom</label>
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Entrez votre nom" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">E-mail</label>
-                  <input type="email" class="form-control" name="email" id="email" value="sofiane.djemaa93@gmail.com" disabled="disabled">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Sujet</label>
-                <input type="text" class="form-control" name="sujet" id="subject" placeholder="Entrez votre sujet" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <input type="textarea" class="form-control" name="message" rows="10" placeholder="Entrez votre message" required></textarea>
-              </div>
-              <div class="text-center"><button type="submit" name="submit" form="formulaire">Envoyez</button></div>
-              <div class="text-center"><a href="./router.php?action=listFormulaire">Nombre de formulaire enregistré</a></div>
+          
+          </div >
+          <form action="./router.php?action=addFormulaire" method="POST" role="form" name="formulaire">
+        <label for="name">Nom</label>
+            <input type="text" class="form-control"  name="nom" id="nom" placeholder="Entrez votre nom" required>
+        <label for="name">E-mail</label>
+            <input type="email" class="form-control" name="email" id="email"  placeholder="Entrez votre e-mail" required>
+        <label for="name">Sujet</label>
+            <input type="text" class="form-control" name="sujet" id="subject" placeholder="Entrez votre sujet" required>
+        <label for="name">Message</label>
+            <input type="textarea" class="form-control" name="message" rows="10" placeholder="Entrez votre message" required></textarea>
+            <br>
+               <button class="btn btn-secondary"><input type="submit" name="submit" form="formulaire"></input></button>
+               <div class="text-center"><a href="./router.php?action=listFormulaire">Nombre de formulaire enregistré</a></div>
               <div class="text-center"><a href="./router.php?action=list5Formulaire">Liste des 5 derniers formulaire</a></div>
-            </form>
-          </div>
-
+          </form> 
         </div>
 
       </div>
@@ -416,7 +405,6 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
