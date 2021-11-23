@@ -1,7 +1,7 @@
 <?php
 
 
-class Model
+class Post
 {
     /**
      * Attribut contenant l'instance PDO
@@ -9,7 +9,7 @@ class Model
     private $bdd;
 
     /**
-     * Attribut statique qui contiendra l'unique instance de Model
+     * Attribut statique qui contiendra l'unique instance de Post
      */
     private static $instance = null;
 
@@ -30,7 +30,7 @@ class Model
     /**
      * Méthode permettant de récupérer un modèle car le constructeur est privé
      */
-    public static function getModel()
+    public static function getPost()
     {
         if (self::$instance === null) {
             self::$instance = new self();
@@ -44,7 +44,7 @@ class Model
      */
     public function getNb5Formulaire()
     {
-        $req = $this->bdd->prepare('SELECT * FROM formulaire ORDER BY id ASC LIMIT 5');
+        $req = $this->bdd->prepare('SELECT * FROM formulaire ORDER BY id DESC LIMIT 5');
         $req->execute();
         return $req->fetchall();
     }
@@ -52,13 +52,12 @@ class Model
     /**
      * Ajoute un formulaire dans la BDD
      */
-    public function getAddFormulaire()
+    public function create_formulaire()
     {
         $req = $this->bdd->prepare("INSERT INTO formulaire (id,nom,email, sujet, message) VALUES (id,'$_POST[nom]','$_POST[email]','$_POST[sujet]','$_POST[message]') ");
         $req->execute();
         return $req;
     }
-
 
     /**
      * Retourne le nombre de message dans la base de données
@@ -72,4 +71,16 @@ class Model
         $tab = $req->fetch(PDO::FETCH_NUM);
         return $tab[0];
     }
+
+    /**
+     * Supprime le commentaire en fonction de ID
+     */
+    public function deleteLastFormulaire()
+    {
+        $query = "DELETE FROM formulaire WHERE id=(SELECT max(id) FROM formulaire)";
+        $req = $this->bdd->prepare($query);
+        $req->execute();
+        return $req;
+    }
+ 
 }

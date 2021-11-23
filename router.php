@@ -1,21 +1,24 @@
 <?php
-require('../sofianedjm/Controllers/Controller.php');
+require('../sofianedjm/Controllers/PostController.php');
 
 if (isset($_GET['action'])) {
 
+    $post = new PostController();
+
     if ($_GET['action'] === 'listFormulaire') {
-        listFormulaire();
+        return $post->listFormulaire();
     }
-
     elseif ($_GET['action'] === 'addFormulaire'){
-         addFormulaire();
+        return $post->addFormulaire();
     }
-
     elseif ($_GET['action'] === 'list5Formulaire'){
-        list5Formulaire();
+        return $post->list5Formulaire();
+    }
+    elseif ($_GET['action'] === 'deleteFormulaire'){
+        return $post->deleteFormulaire();
     }
 else {
-    router();
+    return $post->router();
 }
 }
 ?>
