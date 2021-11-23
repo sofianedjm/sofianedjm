@@ -378,8 +378,8 @@
             <input type="textarea" class="form-control" name="message" rows="10" placeholder="Entrez votre message" required></textarea>
             <br>
                <button class="btn btn-secondary"><input type="submit" name="submit" form="formulaire"></input></button>
-               <div class="text-center"><a href="./router.php?action=listFormulaire">Nombre de formulaire enregistré</a></div>
-              <div class="text-center"><a href="./router.php?action=list5Formulaire">Liste des 5 derniers formulaire</a></div>
+              <div class="text-center"><a href="./router.php?action=listFormulaire" target="_blank">Nombre de formulaire enregistré</a></div>
+              <div class="text-center"><a href="./router.php?action=list5Formulaire" target="_blank">Liste des 5 derniers formulaire</a></div>
           </form> 
         </div>
 
