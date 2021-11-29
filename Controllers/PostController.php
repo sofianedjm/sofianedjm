@@ -29,6 +29,7 @@ class PostController {
     function deleteFormulaire(){
     $m = Post::getPost();
     $m->deleteLastFormulaire();
+    include_once('../sofianedjm/Views/view_deleteFormulaire.php'); 
     }
 
     function router() {
