@@ -1,9 +1,9 @@
 <?php
-require('../sofianedjm/Controllers/PostController.php');
+require_once('../sofianedjm/Controllers/ContactController.php');
 
 if (isset($_GET['action'])) {
 
-    $post = new PostController();
+    $post = new ContactController();
 
     if ($_GET['action'] === 'listFormulaire') {
         return $post->listFormulaire();

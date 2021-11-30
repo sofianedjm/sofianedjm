@@ -101,12 +101,12 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>20</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sofiane.djemaa93@gmail.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Cours de soutien scolaire:</strong> <span>Disponible</span></li>
+                  <iframe src="assets\pdf\CV_DJEMAA_Sofiane.pdf" width="500px" height="500px"></iframe>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section><!-- End About Section -->
 
@@ -379,7 +379,7 @@
             <br>
                <button class="btn btn-secondary"><input type="submit" name="submit" form="formulaire"></input></button>
               <div class="text-center"><a href="./router.php?action=listFormulaire" target="_blank">Nombre de formulaire enregistré</a></div>
-              <div class="text-center"><a href="./router.php?action=list5Formulaire" target="_blank">Liste des 5 derniers formulaire</a></div>
+              <div class="text-center"><a href="./router.php?action=list5Formulaire" target="_blank">Liste des 5 derniers formulaires</a></div>
               <div class="text-center"><a href="./router.php?action=deleteFormulaire" target="_blank">Supprime le dernier commentaire enregistré</a></div>
           </form> 
         </div>

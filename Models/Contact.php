@@ -1,7 +1,8 @@
 <?php
 
 
-class Post
+class Contact
+
 
 {
     private int $id;
@@ -10,12 +11,12 @@ class Post
     private string $sujet;
     private string $message;
 
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
 
-    public function setId(int $id): self
+    public function setId(int $id)
     {
         $this->id = $id;
 
@@ -27,7 +28,7 @@ class Post
         return $this->nom;
     }
 
-    public function setNom(string $nom): self
+    public function setNom(string $nom)
     {
         $this->nom = $nom;
 

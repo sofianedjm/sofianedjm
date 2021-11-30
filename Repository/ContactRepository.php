@@ -1,7 +1,10 @@
 <?php
 
+include_once("../sofianedjm/Models/Contact.php");
 
-class Post
+
+class ContactRepository
+
 {
     /**
      * Attribut contenant l'instance PDO
@@ -26,6 +29,7 @@ class Post
             die('Connexion error :' . $e->getMessage());
         }
     }
+    
 
     /**
      * Méthode permettant de récupérer un modèle car le constructeur est privé
@@ -46,7 +50,7 @@ class Post
     {
         $req = $this->bdd->prepare('SELECT * FROM formulaire ORDER BY id DESC LIMIT 5');
         $req->execute();
-        return $req->fetchall();
+        return $this->buildObject($req->fetchAll());
     }
 
     /**
@@ -82,5 +86,16 @@ class Post
         $req->execute();
         return $req;
     }
- 
+
+    private function buildObject(array $row)
+    {
+        $contact = new Contact();
+        $contact->setId((int) $row['id']);
+        $contact->setNom($row['nom']);
+        $contact->setEmail($row['email']);
+        $contact->setSujet($row['sujet']);
+        $contact->setMessage($row['message']);
+        return $contact;
+    }
+
 }
