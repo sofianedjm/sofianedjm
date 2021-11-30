@@ -5,8 +5,10 @@ class Post
 
 {
     private int $id;
-    private string $title;
-    private string $content;
+    private string $nom;
+    private string $email;
+    private string $sujet;
+    private string $message;
 
     public function getId(): int
     {
@@ -20,39 +22,50 @@ class Post
         return $this;
     }
 
-    public function getTitle()
+    public function getNom()
     {
-        return $this->title;
+        return $this->nom;
     }
 
-    public function setTitle(string $title): self
+    public function setNom(string $nom): self
     {
-        $this->title = $title;
+        $this->nom = $nom;
 
         return $this;
     }
 
-    public function getContent()
+    public function getEmail()
     {
-        return $this->content;
+        return $this->email;
     }
 
-    public function setContent($content)
+    public function setEmail($email)
     {
-        $this->content = $content;
+        $this->email = $email;
 
         return $this;
     }
 
-
-    public function getAuthorId()
+    public function getSujet()
     {
-        return $this->authorId;
+        return $this->sujet;
     }
 
-    public function setAuthorId($authorId)
+    public function setSujet($sujet)
     {
-        $this->authorId = $authorId;
+        $this->sujet = $sujet;
+
+        return $this;
+    }
+
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    public function setMessage($message)
+    {
+        $this->sujet = $message;
 
         return $this;
     }
