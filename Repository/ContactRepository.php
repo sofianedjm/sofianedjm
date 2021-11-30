@@ -50,7 +50,12 @@ class ContactRepository
     {
         $req = $this->bdd->prepare('SELECT * FROM formulaire ORDER BY id DESC LIMIT 5');
         $req->execute();
-        return $this->buildObject($req->fetchAll());
+
+        $objects = [];
+        foreach ($req->fetchAll() as $post) {
+            $objects[] = $this->buildObject($post);
+        }
+        return $objects;
     }
 
     /**
@@ -90,11 +95,13 @@ class ContactRepository
     private function buildObject(array $row)
     {
         $contact = new Contact();
-        $contact->setId((int) $row['id']);
+
+        $contact->setId($row['id']);
         $contact->setNom($row['nom']);
         $contact->setEmail($row['email']);
         $contact->setSujet($row['sujet']);
         $contact->setMessage($row['message']);
+
         return $contact;
     }
 
