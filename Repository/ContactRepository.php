@@ -95,13 +95,11 @@ class ContactRepository
     private function buildObject(array $row)
     {
         $contact = new Contact();
-
         $contact->setId($row['id']);
         $contact->setNom($row['nom']);
         $contact->setEmail($row['email']);
         $contact->setSujet($row['sujet']);
         $contact->setMessage($row['message']);
-
         return $contact;
     }
 

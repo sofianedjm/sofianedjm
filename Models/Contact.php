@@ -66,7 +66,7 @@ class Contact
 
     public function setMessage($message)
     {
-        $this->sujet = $message;
+        $this->message = $message;
 
         return $this;
     }

@@ -1,0 +1,23 @@
+table{
+    font-family: "Raleway", sans-serif ;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
+}
+
+th,td{
+    border : 1px solid black;
+    padding: 25px;
+}
+
+th{
+    background-color: #149ddd;
+}
+
+caption{
+    text-align: center;
+    margin: auto;
+    padding: 3%;
+    font-weight: bold;
+    caption-side: bottom;
+}
