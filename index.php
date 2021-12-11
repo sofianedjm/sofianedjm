@@ -31,10 +31,10 @@
 
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
+
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-  <!-- ======= Header ======= -->
+
   <header id="header">
     <div class="d-flex flex-column">
 
@@ -58,9 +58,9 @@
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Soft-skills</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contacts</span></a></li>
         </ul>
-      </nav><!-- .nav-menu -->
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
   <!-- ======= Description personnelle ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
@@ -73,7 +73,6 @@
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
 
@@ -94,6 +93,7 @@
                 <li><i class="bi bi-chevron-right"></i> <strong>Date de naissance :</strong> <span>7 mai 2001</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Numéro de téléphone:</strong> <span>+33 6 52 91 50 46</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Ville:</strong> <span>Paris, France</span></li>
+                  <li><i class="bi bi-chevron-right"></i><strong>Mon CV :</strong><iframe src="assets\pdf\CV_DJEMAA_Sofiane.pdf" width="520px" height="344px"></iframe></li>
                 </ul>
               </div>
               <div class="col-lg-6">
@@ -101,7 +101,6 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>20</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sofiane.djemaa93@gmail.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Cours de soutien scolaire:</strong> <span>Disponible</span></li>
-                  <iframe src="assets\pdf\CV_DJEMAA_Sofiane.pdf" width="500px" height="500px"></iframe>
                 </ul>
               </div>
             </div>
@@ -155,9 +154,9 @@
             </div>
 
             <div class="progress">
-              <span class="skill">Scala <i class="val">70%</i></span>
+              <span class="skill">Scala <i class="val">75%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
@@ -240,7 +239,7 @@
         </div>
 
       </div>
-    </section><!-- End Resume Section -->
+    </section>
 
     <!-- ======= Projets ======= -->
     <section id="portfolio" class="portfolio section-bg">
@@ -284,9 +283,8 @@
 
       </div>
     </section>
-    <!-- End Portfolio Section -->
 
-    <!-- ======= Services Section ======= -->
+
     <section id="services" class="services">
       <div class="container">
 
@@ -328,10 +326,8 @@
 
       </div>
     </section>
-    <!-- End Services Section -->
 
 
-    <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
@@ -367,7 +363,7 @@
             </div>
           
           </div >
-          <form action="./router.php?action=addFormulaire" method="POST" role="form" name="formulaire">
+          <form action="./router.php?action=addFormulaire" method="POST" role="form" name="formulaire" style="padding: 10px;">
         <label for="name">Nom</label>
             <input type="text" class="form-control"  name="nom" id="nom" placeholder="Entrez votre nom" required>
         <label for="name">E-mail</label>
@@ -377,7 +373,7 @@
         <label for="name">Message</label>
             <input type="textarea" class="form-control" name="message" rows="10" placeholder="Entrez votre message" required></textarea>
             <br>
-               <button class="btn btn-secondary"><input type="submit" name="submit" form="formulaire"></input></button>
+              <button class="btn btn-secondary"><input type="submit" name="submit" form="formulaire"></input></button>
               <div class="text-center"><a href="./router.php?action=listFormulaire" target="_blank">Nombre de formulaire enregistré</a></div>
               <div class="text-center"><a href="./router.php?action=list5Formulaire" target="_blank">Liste des 5 derniers formulaires</a></div>
               <div class="text-center"><a href="./router.php?action=deleteFormulaire" target="_blank">Supprime le dernier commentaire enregistré</a></div>
@@ -385,11 +381,11 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section>
 
-  </main><!-- End #main -->
+  </main>
 
-  <!-- ======= Footer ======= -->
+
   <footer id="footer">
     <div class="container">
       <div class="copyright">
@@ -397,7 +393,6 @@
       </div>
     </div>
   </footer>
-  <!-- End  Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

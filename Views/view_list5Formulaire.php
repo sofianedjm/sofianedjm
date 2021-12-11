@@ -3,7 +3,8 @@
     <head>
          <meta charset="UTF-8">
          <link href="assets/img/favicon.png" rel="icon">
-         <link rel="stylesheet" href="assets/css/list5Formulaire.css"
+         <link rel="stylesheet" href="assets/css/list5Formulaire.css"/>
+         <title>Vue des 5 derniers formulaires</title>
     </head>
     <body>
     <pre>
