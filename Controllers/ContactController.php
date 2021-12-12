@@ -25,6 +25,13 @@ class ContactController {
     include_once('../sofianedjm/Views/view_addFormulaire.php');
     }
 
+    function updateFormulaire(){
+    $m = ContactRepository::getPost();
+    $update = $m->update_formulaire();
+    include_once('../sofianedjm/Views/view_updateFormulaire.php');
+
+    }
+
     function deleteFormulaire(){
     $m = ContactRepository::getPost();
     $m->deleteLastFormulaire();

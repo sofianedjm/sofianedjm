@@ -376,6 +376,7 @@
               <button class="btn btn-secondary"><input type="submit" name="submit" form="formulaire"></input></button>
               <div class="text-center"><a href="./router.php?action=listFormulaire" target="_blank">Nombre de formulaire enregistré</a></div>
               <div class="text-center"><a href="./router.php?action=list5Formulaire" target="_blank">Liste des 5 derniers formulaires</a></div>
+              <div class="text-center"><a href="./router.php?action=updateFormulaire" target="_blank">Update du dernier message enregistré par la valeur "Hello world !"</a></div>
               <div class="text-center"><a href="./router.php?action=deleteFormulaire" target="_blank">Supprime le dernier commentaire enregistré</a></div>
           </form> 
         </div>

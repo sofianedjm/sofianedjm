@@ -17,6 +17,10 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] === 'deleteFormulaire'){
         return $post->deleteFormulaire();
     }
+    elseif ($_GET['action'] === 'updateFormulaire'){
+        return $post->updateFormulaire();
+    }
+
 else {
     return $post->router();
 }

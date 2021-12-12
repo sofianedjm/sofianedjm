@@ -82,6 +82,16 @@ class ContactRepository
     }
 
     /**
+     * Update un champs du formulaire
+     */
+    public function update_formulaire(){
+        $query = "UPDATE formulaire SET message = 'Hello world !' WHERE id=(SELECT max(id) FROM formulaire)";
+        $req = $this->bdd->prepare($query);
+        $req->execute();
+        return $req;
+    }
+
+    /**
      * Supprime le commentaire en fonction de ID
      */
     public function deleteLastFormulaire()
